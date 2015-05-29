@@ -1,3 +1,3 @@
 [submodule "emerge"]
 	path = emerge
-	url = git://anongit.kde.org/emerge.git
+	url = https://github.com/cmollekopf/emerge.git
