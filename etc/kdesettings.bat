@@ -1,7 +1,7 @@
 @echo off
 
 rem Here you set the base directory under which the whole KDE subsystem will live.
-set KDEROOT=C:\Users\mollekopf\kderoot
+set KDEROOT=C:\Users\kolab\kderoot
 
 rem ####### Compiler settings #######
 
@@ -17,8 +17,8 @@ rem * msvc2013 - use the Microsoft Visual C++ 2013 compiler
 rem * intel    - use the Intel C++ Compiler
 rem *            note: "intel" option depends on an MSVC environment,
 rem *                  please set the INTEL_VSSHELL var (vs2008, vs2010 or vs2012)
-set KDECOMPILER=msvc2010
-set INTEL_VSSHELL=vs2010
+set KDECOMPILER=msvc2013
+set INTEL_VSSHELL=vs2012
 
 rem Here you can set the architecure for which packages are build. 
 rem Currently x86 (32bit), x64 (64) and arm (wince) are supported
@@ -152,7 +152,7 @@ if "%EMERGE_TARGET_PLATFORM%" == "WM65" set TARGET_SDKDIR=%PROGRAM_FILES%\Window
 rem Here you can set a specific platform SDK to use with the Visual Studio toolchain
 rem Normally this is not needed as a default platform SDK is set by the build environment script
 rem set PSDKDIR=%PROGRAM_FILES%\Microsoft SDKs\Windows\v6.0A
-set PSDKDIR=C:\Program Files\Microsoft SDKs\Windows\v7.1
+set PSDKDIR=C:\Program Files\Microsoft SDKs\Windows\v7.1A
 
 rem Here you can set the path to your Microsoft DirectX SDK installation
 rem This is not needed if you use MinGW or won't use the directx backend for Phonon
