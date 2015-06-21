@@ -1,0 +1,49 @@
+== Tools ==
+* alphacommander: http://gooseberrycreative.com/cmder/
+* msysgit
+
+== Requirements ==
+* Python 3.4:
+* Visual Studio 2013 Express Edition:
+
+== Remote Desktop ==
+xfreerdp --plugin cliprdr -u chrigi 192.168.122.23
+
+== Build stuff ==
+in msysgit, because alphacommander doesn't work for git:
+* git clone kdeonwindows kderoot
+in alphacommander
+* cd kderoot
+* git submodule init
+* git submodule update
+* cd emerge
+* ./kdeenv.bat
+Build stuff:
+* emerge kdepim-e5-package
+Build installer:
+* emerge --package kdepim-e5-package
+
+== getting stuff to work ==
+* kde only has a sessionbus
+* in $installdir/etc/dbus-1 we need the following files and directories:
+* session.d/
+* system.d/
+* session.conf
+* system.conf
+
+== Hints ==
+* if there is an execution policy problem in the console:set-executionpolicy unrestricted -scope currentuser
+* If jom.exe get's stuck at 100%, kill and rebuild with emerge --make $package
+
+== FIXME's ==
+* libkolab cmake adjustments
+* xapian-core #include <algorithm> adjustments
+* kactivities, comment second _for_each_assoc_helper_container
+* kde-l10n-de, the cloned repository doesn't have the same content as the archives, and needs to be processed differently (probably by running autogen.sh and stuff)
+* kdelibs windows branch
+* zanshin still builds from github
+
+== Running kontact ==
+* Run kdeinit4 first
+* Make sure to have both the msvc2010 and msvc2013 vcredist packages installed. They are required in the x86 version, not the x64 version as one would assume.
+** The DependencyWalker tool can be used to look for missing dependencies, ieshims.dll and wer.dll are probably safe to ignore.
