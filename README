@@ -42,6 +42,7 @@ Build installer:
 * kde-l10n-de, the cloned repository doesn't have the same content as the archives, and needs to be processed differently (probably by running autogen.sh and stuff)
 * kdelibs windows branch
 * zanshin still builds from github
+* ldap resource is missing
 
 == Running kontact ==
 * Run kdeinit4 first
