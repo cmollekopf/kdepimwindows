@@ -34,6 +34,7 @@ Build installer:
 == Hints ==
 * if there is an execution policy problem in the console:set-executionpolicy unrestricted -scope currentuser
 * If jom.exe get's stuck at 100%, kill and rebuild with emerge --make $package
+* configs are in C:\Users\kolab\AppData\Roaming\{.kde,.kontact}
 
 == FIXME's ==
 * libkolab cmake adjustments
