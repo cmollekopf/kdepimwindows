@@ -49,3 +49,10 @@ Build installer:
 * Run kdeinit4 first
 * Make sure to have both the msvc2010 and msvc2013 vcredist packages installed. They are required in the x86 version, not the x64 version as one would assume.
 ** The DependencyWalker tool can be used to look for missing dependencies, ieshims.dll and wer.dll are probably safe to ignore.
+
+== Building over SSH ==
+Install the Bitvise SSH Server on the windows vm. It's the only one that seems to be able to execute emerge so all environment variables are set.
+
+Once you ssh'd in:
+* C:\Users\kolab\kdepimwindows\emerge\kdeenv.bat
+* rebuildall.bat
