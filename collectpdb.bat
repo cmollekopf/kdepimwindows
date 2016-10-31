@@ -5,9 +5,10 @@ set dTarget=C:\Users\kolab\kdepimwindows\tmp\pdb\
 mkdir "%dTarget%\"
 set fType=*.pdb
 
-call :gatherFiles "%fType%" "C:\Users\kolab\kdepimwindows\build\kde\kdepimlibs-20110129\image-msvc2013-RelWithDebInfo-gitHEAD\" "%dTarget%\"
-call :gatherFiles "%fType%" "C:\Users\kolab\kdepimwindows\build\kde\kdepim-runtime-20101222\image-msvc2013-RelWithDebInfo-gitHEAD\" "%dTarget%\"
+call :gatherFiles "%fType%" "C:\Users\kolab\kdepimwindows\build\kde\kdepimlibs-20110129\work\msvc2013-RelWithDebInfo-gitHEAD\" "%dTarget%\"
+call :gatherFiles "%fType%" "C:\Users\kolab\kdepimwindows\build\kde\kdepim-runtime-20101222\work\msvc2013-RelWithDebInfo-gitHEAD\" "%dTarget%\"
 call :gatherFiles "%fType%" "C:\Users\kolab\kdepimwindows\build\kde\kdepim-20080202\work\msvc2013-RelWithDebInfo-gitHEAD\" "%dTarget%\"
+goto:eof
 
 :gatherFiles
 for /f "delims=" %%f in ('dir /a-d /b /s "%~2\%~1"') do (
